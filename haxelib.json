@@ -1,0 +1,11 @@
+{
+	"name": "plist",
+	"url" : "https://github.com/back2dos/plist",
+	"license": "MIT",
+	"tags": ["plist", "cross", "parser"],
+	"description": "Plist parser",
+	"version": "0.0.1",
+	"releasenote": "Basic support",
+	"contributors": ["back2dos"], 
+	"classPath": "src" 
+}

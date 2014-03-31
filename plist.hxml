@@ -1,0 +1,6 @@
+-cp src
+-cp tests
+-lib tink_core
+-main Run
+-js bin/tests.js
+#iota start Run.bat
