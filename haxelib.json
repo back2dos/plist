@@ -3,9 +3,9 @@
 	"url" : "https://github.com/back2dos/plist",
 	"license": "MIT",
 	"tags": ["plist", "cross", "parser"],
-	"description": "Plist parser",
-	"version": "0.0.1",
-	"releasenote": "Basic support",
+	"description": "Plist parsing and marshalling",
+	"version": "0.0.2",
+	"releasenote": "Added writer",
 	"contributors": ["back2dos"], 
 	"classPath": "src",
 	"dependencies": {

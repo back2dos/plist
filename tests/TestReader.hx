@@ -1,13 +1,13 @@
 package ;
 
-class TestParser extends Base {
+class TestReader extends Base {
 	function testRead() {
 
 		assertStructEq({
 			Author : 'William Shakespeare',
 			Lines : ['It is a tale told by an idiot,', 'Full of sound and fury, signifying nothing.'],
 			Birthdate : 1564,
-		}, plist.Parser.parse(SHAKESPEARE));
+		}, plist.Reader.read(SHAKESPEARE));
 		
 		assertStructEq({
 			author: 'foobar',
@@ -16,10 +16,10 @@ class TestParser extends Base {
 			identifier: 'manuscript',
 			styleSheet: 'blabla',
 			type: 'richText',
-		}, plist.Parser.parse(OTHER));
+		}, plist.Reader.read(OTHER));
 	}
 	
-	static var SHAKESPEARE = 
+	static public var SHAKESPEARE = 
 		'<?xml version="1.0" encoding="UTF-8"?>
 		<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
 		<plist version="1.0">
@@ -36,7 +36,7 @@ class TestParser extends Base {
 		</dict>
 		</plist>';
 
-	static var OTHER = 
+	static public var OTHER = 
 		'<?xml version="1.0" encoding="UTF-8"?>
 		<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 		<plist version="1.0">

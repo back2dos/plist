@@ -2,17 +2,18 @@ package plist;
 
 using tink.CoreApi;
 
-class Parser {
-	static public function parse(s:String):Dynamic 
+class Reader {
+	static public function read(s:String):Dynamic 
 		return parseNode(Xml.parse(s).firstElement());
 	
 	static function val(x:Xml)
 		return x.firstChild().nodeValue;
 		
-	static function parseNode(x:Xml):Dynamic {
+	static function parseNode(x:Xml):Dynamic 
 		return
 			switch x.nodeName {
 				case 'plist': parseNode(x.firstElement());
+				case 'data': Date.fromString(val(x));
 				case 'dict': 
 					var elts = x.elements(),
 						ret:Dynamic = {};
@@ -28,5 +29,4 @@ class Parser {
 				case 'real': Std.parseFloat(val(x));
 				case v: null;
 			}
-	}
 }

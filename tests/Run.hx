@@ -5,7 +5,8 @@ import haxe.unit.*;
 
 class Run {
 	static var tests:Array<TestCase> = [
-		new TestParser(),
+		new TestReader(),
+		new TestWriter(),
 	];
 	static function main() {	
 		#if js//works for nodejs and browsers alike
