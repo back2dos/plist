@@ -4,8 +4,8 @@
 	"license": "MIT",
 	"tags": ["plist", "cross", "parser"],
 	"description": "Plist parsing and marshalling",
-	"version": "0.0.2",
-	"releasenote": "Added writer",
+	"version": "0.0.5",
+	"releasenote": "Skip null",
 	"contributors": ["back2dos"], 
 	"classPath": "src",
 	"dependencies": {
