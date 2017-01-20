@@ -9,6 +9,6 @@
 	"contributors": ["back2dos"], 
 	"classPath": "src",
 	"dependencies": {
-		"tink_core": "1.0.0-rc.1"
+		"tink_core": "1.6.1"
 	}
 }
